@@ -3,10 +3,12 @@ import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 
+import StackNavigator from './src/navigator/StackNavigator';
+
 function App() {
   return (
     <NavigationContainer>
-      <Text>Hello World</Text>
+      <StackNavigator />
     </NavigationContainer>
   )
 };
