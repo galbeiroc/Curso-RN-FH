@@ -3,13 +3,15 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 
 // import StackNavigator from './src/navigator/StackNavigator';
-import DrawerBasic from './src/navigator/DrawerBasic';
+// import DrawerBasic from './src/navigator/DrawerBasic';
+import DrawerLateral from './src/navigator/DrawerLateral';
 
 function App() {
   return (
     <NavigationContainer>
       {/* <StackNavigator /> */}
-      <DrawerBasic />
+      {/* <DrawerBasic /> */}
+      <DrawerLateral />
     </NavigationContainer>
   )
 };
