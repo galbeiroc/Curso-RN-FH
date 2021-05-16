@@ -1,25 +1,18 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 
-import StackNavigator from './src/navigator/StackNavigator';
+// import StackNavigator from './src/navigator/StackNavigator';
+import DrawerBasic from './src/navigator/DrawerBasic';
 
 function App() {
   return (
     <NavigationContainer>
-      <StackNavigator />
+      {/* <StackNavigator /> */}
+      <DrawerBasic />
     </NavigationContainer>
   )
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  }
-})
 
  export default App;
 
