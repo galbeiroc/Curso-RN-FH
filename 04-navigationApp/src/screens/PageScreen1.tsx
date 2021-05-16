@@ -16,14 +16,30 @@ function PageScreen1({ navigation }: Props) {
       />
 
       <Text>Navigate with Arguments</Text>
+      <View style={{ flexDirection: 'row'}}>
       <TouchableOpacity
+        style={Styles.bigButton}
         onPress={() => navigation.navigate('PersonScreen', {
           id: 1,
           name: 'Albeiro',
         })}
       >
-        <Text>Go to Person</Text>
+        <Text style={Styles.bigButtonText}>
+          Go to Albeiro
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={{...Styles.bigButton, backgroundColor: '#5856D6'}}
+        onPress={() => navigation.navigate('PersonScreen', {
+          id: 2,
+          name: 'Karen',
+        })}
+      >
+        <Text style={Styles.bigButtonText}>
+          Go to Karen
+        </Text>
         </TouchableOpacity>
+      </View>
     </View>
   )
 }

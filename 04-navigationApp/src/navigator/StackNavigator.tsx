@@ -5,8 +5,14 @@ import PageScreen2 from '../screens/PageScreen2';
 import PageScreen3 from '../screens/PageScreen3';
 import PersonScreen from '../screens/PersonScreen';
 
-const Stack = createStackNavigator();
+export type RootStackParams = {
+  PageScreen1: undefined,
+  PageScreen2: undefined,
+  PageScreen3: undefined,
+  PersonScreen: { id: number, name: string },
+}
 
+const Stack = createStackNavigator<RootStackParams>(); //Set type all screen
 
 function StackNavigator() {
   return(
