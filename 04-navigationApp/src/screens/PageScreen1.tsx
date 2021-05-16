@@ -22,7 +22,7 @@ function PageScreen1({ navigation }: Props) {
         onPress={() => navigation.navigate('PageScreen2')}
       />
 
-      <Text>Navigate with Arguments</Text>
+      <Text style={{ marginVertical: 20, fontSize: 18 }}>Navigate with Arguments</Text>
       <View style={{ flexDirection: 'row'}}>
       <TouchableOpacity
         style={Styles.bigButton}

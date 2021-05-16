@@ -4,7 +4,7 @@ import {
 } from '@react-navigation/drawer';
 import StackNavigator from './StackNavigator';
 import SettingScreen from '../screens/SettingScreen';
-import { Image, Text, useWindowDimensions, View } from 'react-native';
+import { Image, Text, TouchableOpacity, useWindowDimensions, View } from 'react-native';
 import { Styles } from '../theme/appTheme';
 
 const Drawer = createDrawerNavigator();
@@ -24,14 +24,24 @@ function DrawerLateral() {
 };
 
 
-function ContentMenu(props: DrawerContentComponentProps<DrawerContentOptions>) {
+function ContentMenu({ navigation }: DrawerContentComponentProps<DrawerContentOptions>) {
   return(
     <DrawerContentScrollView>
-      <View style={Styles.avatarContent}>
+      {/* Section Avatar */}
+      <View style={Styles.contentAvatar}>
         <Image
           style={Styles.avatar}
           source={{uri: 'https://ra.ac.ae/wp-content/uploads/2017/02/user-icon-placeholder.png'}}
         />
+      </View>
+      {/* Section menu */}
+      <View style={Styles.contentMenu}>
+        <TouchableOpacity onPress={() => navigation.navigate('StackNavigator')} style={Styles.buttonMenu}>
+          <Text style={Styles.textMenu}>Stack</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('SettingScreen')} style={Styles.buttonMenu}>
+          <Text style={Styles.textMenu}>Setting</Text>
+        </TouchableOpacity>
       </View>
     </DrawerContentScrollView>
   )
