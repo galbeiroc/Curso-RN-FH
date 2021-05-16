@@ -7,6 +7,7 @@ import BottomTab1 from '../Tabs/BottomTab1';
 import BottomTab2 from '../Tabs/BottomTab2';
 import StackNavigator from './StackNavigator';
 import { colors } from '../theme/appTheme';
+import TopTabs from './TopTabs';
 
 const TabIos = createBottomTabNavigator();
 const TabAndroid = createMaterialBottomTabNavigator();
@@ -41,7 +42,7 @@ function BottomTabsAndroid() {
       })}
     >
       <TabAndroid.Screen name="BottomTab1" options={{ title: 'Tab1' }} component={BottomTab1} />
-      <TabAndroid.Screen name="BottomTab2" options={{ title: 'Tab2' }} component={BottomTab2} />
+      <TabAndroid.Screen name="BottomTab2" options={{ title: 'Tab2' }} component={TopTabs} />
       <TabAndroid.Screen name="StackNavigator" options={{ title: 'Stack' }} component={StackNavigator} />
     </TabAndroid.Navigator>
   )
@@ -83,7 +84,7 @@ function BottomTabsIos() {
       })}
     >
       <TabIos.Screen name="BottomTab1" options={{ title: 'Tab1' }} component={BottomTab1} />
-      <TabIos.Screen name="BottomTab2" options={{ title: 'Tab2'}} component={BottomTab2} />
+      <TabIos.Screen name="BottomTab2" options={{ title: 'Tab2'}} component={TopTabs} />
       <TabIos.Screen name="StackNavigator" options={{ title: 'Stack'}} component={StackNavigator} />
     </TabIos.Navigator>
   )
