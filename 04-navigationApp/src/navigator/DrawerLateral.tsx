@@ -2,9 +2,11 @@ import React from 'react';
 import {
   createDrawerNavigator, DrawerContentComponentProps, DrawerContentOptions, DrawerContentScrollView
 } from '@react-navigation/drawer';
+import { Image, Text, TouchableOpacity, useWindowDimensions, View } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 // import StackNavigator from './StackNavigator';
 import SettingScreen from '../screens/SettingScreen';
-import { Image, Text, TouchableOpacity, useWindowDimensions, View } from 'react-native';
 import { Styles } from '../theme/appTheme';
 import BottomTabs from './Tabs';
 
@@ -37,11 +39,17 @@ function ContentMenu({ navigation }: DrawerContentComponentProps<DrawerContentOp
       </View>
       {/* Section menu */}
       <View style={Styles.contentMenu}>
-        <TouchableOpacity onPress={() => navigation.navigate('BottomTabs')} style={Styles.buttonMenu}>
-          <Text style={Styles.textMenu}>Stack</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('BottomTabs')} style={{...Styles.buttonMenu, flexDirection: 'row'}}>
+          <Icon name="compass-outline" size={25} color='black' style={{marginRight: 10}} />
+          <Text style={Styles.textMenu}>
+            Stack
+          </Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('SettingScreen')} style={Styles.buttonMenu}>
-          <Text style={Styles.textMenu}>Setting</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('SettingScreen')} style={{...Styles.buttonMenu, flexDirection: 'row'}}>
+          <Icon name="settings-outline" size={25} color='black' style={{marginRight: 10}} />
+          <Text style={Styles.textMenu}>
+            Setting
+          </Text>
         </TouchableOpacity>
       </View>
     </DrawerContentScrollView>

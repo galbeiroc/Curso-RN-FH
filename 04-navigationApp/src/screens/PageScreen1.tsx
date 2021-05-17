@@ -2,7 +2,9 @@ import React, { useEffect } from 'react';
 import { Button, Text, View, TouchableOpacity } from 'react-native';
 import { DrawerScreenProps } from '@react-navigation/drawer';
 import { StackScreenProps } from '@react-navigation/stack';
-import { Styles } from '../theme/appTheme';
+import Icon from 'react-native-vector-icons/Ionicons';
+
+import { colors, Styles } from '../theme/appTheme';
 
 //interface Props extends StackScreenProps<any, any> {};
 interface Props extends DrawerScreenProps<any, any> {};
@@ -11,7 +13,11 @@ function PageScreen1({ navigation }: Props) {
 
   useEffect(() => {
     navigation.setOptions({
-      headerLeft: () => <Button title="Menu" onPress={() => navigation.toggleDrawer()}/>
+      headerLeft: () => (
+        <TouchableOpacity onPress={() => navigation.toggleDrawer()} style={{ marginLeft: 15}}>
+          <Icon name="menu-outline" size={35} color={colors.primary} />
+        </TouchableOpacity>
+      )
     })
   },[])
   return (
@@ -31,6 +37,7 @@ function PageScreen1({ navigation }: Props) {
           name: 'Albeiro',
         })}
       >
+        <Icon name="man-outline" size={30} color={colors.white} />
         <Text style={Styles.bigButtonText}>
           Go to Albeiro
         </Text>
@@ -42,6 +49,7 @@ function PageScreen1({ navigation }: Props) {
           name: 'Karen',
         })}
       >
+        <Icon name="woman-outline" size={30} color={colors.white} />
         <Text style={Styles.bigButtonText}>
           Go to Karen
         </Text>

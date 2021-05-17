@@ -1,7 +1,9 @@
 import { StyleSheet } from 'react-native';
 
 export const colors = {
-  primary: '#5856D6'
+  primary: '#5856D6',
+  white: '#fff',
+  black: '#ccc'
 }
 
 export const Styles = StyleSheet.create({
@@ -14,7 +16,7 @@ export const Styles = StyleSheet.create({
   },
   bigButton: {
     width: 120,
-    height: 70,
+    height: 80,
     borderRadius: 15,
     backgroundColor: '#FF9427',
     alignItems: 'center',
@@ -39,7 +41,8 @@ export const Styles = StyleSheet.create({
   contentMenu: {
     marginVertical: 25,
     marginHorizontal: 20,
-    alignItems: 'center'
+    alignContent: 'center',
+    alignItems: 'flex-start'
   },
   buttonMenu: {
     marginVertical: 10

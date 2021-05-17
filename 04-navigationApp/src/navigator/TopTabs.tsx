@@ -2,6 +2,7 @@ import React from 'react';
 import { Text } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import Chat from '../Tabs/TopTab1';
 import Contacts from '../Tabs/TopTab2';
@@ -34,16 +35,16 @@ function TopTabs() {
           let iconName: string = '';
           switch(route.name) {
             case 'Chat':
-              iconName='tt1';
+              iconName='chatbox-ellipses-outline';
             break;
             case 'Contacts':
-              iconName='tt2';
+              iconName='people-outline';
             break;
             case 'Albums':
-              iconName='tt3';
+              iconName='albums-outline';
             break;
           }
-          return <Text style={{ color }}>{iconName}</Text>
+          return <Icon name={iconName} size={20} color={color} />
         }
       })}
     >
