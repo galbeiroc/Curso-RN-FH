@@ -59,7 +59,8 @@ function BottomTabsIos() {
         style: {
           borderTopColor: colors.primary,
           borderTopWidth: 0,
-          elevation: 0
+          shadowColor: 'transparent', //ios
+          elevation: 0 //android
         },
         labelStyle: {
           fontSize: 15
